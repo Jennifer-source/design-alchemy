@@ -23,7 +23,7 @@ export function Cursor() {
       y.set(e.clientY);
       const el = (e.target as HTMLElement | null)?.closest<HTMLElement>("[data-cursor]");
       if (el) {
-        setLabel(el.dataset.cursor || "");
+        setLabel(el.dataset['cursor'] || "");
         setActive(true);
       } else {
         const interactive = (e.target as HTMLElement | null)?.closest("a,button");

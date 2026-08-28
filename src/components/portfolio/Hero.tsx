@@ -38,8 +38,8 @@ export function Hero() {
               <span key={line} className="block overflow-hidden">
                 <motion.span
                   className="block"
-                  initial={reduce ? undefined : { y: "108%" }}
-                  animate={reduce ? undefined : { y: 0 }}
+                  initial={reduce ? { y: 0 } : { y: "108%" }}
+                  animate={{ y: 0 }}
                   transition={{ duration: 1.15, delay: 0.15 + i * 0.09, ease: EASE }}
                 >
                   {i === 3 ? (
@@ -68,8 +68,8 @@ export function Hero() {
         <div className="relative lg:col-span-5">
           <motion.div
             className="relative aspect-4/5 w-full overflow-hidden"
-            initial={reduce ? undefined : { clipPath: "inset(100% 0 0 0)" }}
-            animate={reduce ? undefined : { clipPath: "inset(0% 0 0 0)" }}
+            initial={reduce ? { clipPath: "inset(0% 0 0 0)" } : { clipPath: "inset(100% 0 0 0)" }}
+            animate={{ clipPath: "inset(0% 0 0 0)" }}
             transition={{ duration: 1.4, delay: 0.35, ease: EASE }}
           >
             <motion.img

@@ -18,8 +18,8 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={reduce ? undefined : { opacity: 0, y }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-12% 0px" }}
       transition={{ duration: 0.9, delay, ease: EASE }}
     >
@@ -46,8 +46,8 @@ export function RevealWords({
         <span key={`${w}-${i}`} className="inline-block overflow-hidden align-bottom">
           <motion.span
             className="inline-block"
-            initial={reduce ? undefined : { y: "110%" }}
-            whileInView={reduce ? undefined : { y: 0 }}
+            initial={reduce ? { y: 0 } : { y: "110%" }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: 1, delay: delay + i * 0.06, ease: EASE }}
           >
