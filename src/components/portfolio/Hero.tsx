@@ -33,9 +33,9 @@ export function Hero() {
             01 — Who I am
           </motion.p>
 
-          <h1 className="display-xl text-[clamp(2.9rem,9.2vw,9.5rem)]">
+          <h1 className="display-xl text-[clamp(2.4rem,7vw,7.2rem)]">
             {lines.map((line, i) => (
-              <span key={line} className="block overflow-hidden">
+              <span key={line} className="block overflow-hidden pb-[0.08em]">
                 <motion.span
                   className="block"
                   initial={reduce ? { y: 0 } : { y: "108%" }}
