@@ -1,24 +1,58 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Cursor } from "@/components/portfolio/Cursor";
+import { Navigation } from "@/components/portfolio/Navigation";
+import { Hero } from "@/components/portfolio/Hero";
+import { Manifesto } from "@/components/portfolio/Manifesto";
+import { SelectedWork } from "@/components/portfolio/SelectedWork";
+import { HowIThink } from "@/components/portfolio/HowIThink";
+import { MotionShowcase } from "@/components/portfolio/MotionShowcase";
+import { Lab } from "@/components/portfolio/Lab";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { Achievements } from "@/components/portfolio/Achievements";
+import { Future } from "@/components/portfolio/Future";
+import { Contact } from "@/components/portfolio/Contact";
+import { Footer } from "@/components/portfolio/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Joseph Jennifer — Designing digital experiences that move" },
+      {
+        name: "description",
+        content:
+          "Portfolio 2026 of Joseph Jennifer, UI/UX designer and creative technologist: case studies, research, design systems, motion and experiments.",
+      },
+      { property: "og:title", content: "Joseph Jennifer — Designing digital experiences that move" },
+      {
+        property: "og:description",
+        content:
+          "Case studies in UX research, product design and creative technology — plus a lab of ongoing experiments.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Cursor />
+      <Navigation />
+      <main>
+        <Hero />
+        <Manifesto />
+        <SelectedWork />
+        <HowIThink />
+        <MotionShowcase />
+        <Lab />
+        <About />
+        <Skills />
+        <Achievements />
+        <Future />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
