@@ -2,6 +2,7 @@ import fleetopsImg from "@/assets/work-fleetops.jpg";
 import mobileImg from "@/assets/work-mobile.jpg";
 import typoImg from "@/assets/work-typo.jpg";
 import labImg from "@/assets/work-lab.jpg";
+import belongImg from "@/assets/work-belong.jpg";
 
 export type Insight = { n: string; title: string; body: string };
 export type ProcessStep = { title: string; caption: string; learned: string };
@@ -152,8 +153,29 @@ export const projects: Project[] = [
       "Instrument a pilot to measure time-to-resolution, and test the handover summary across a full shift rotation.",
   },
   {
-    id: "mira",
+    id: "belong",
     index: "02",
+    title: "Belong",
+    slug: "belong",
+    year: "2026",
+    category: "HCI / UX Research / Interaction Design",
+    description: "Designing for the uncertainty of belonging.",
+    positioning:
+      "A research-driven HCI concept helping international students navigate unfamiliar systems, social situations, and everyday uncertainty.",
+    role: "UX/UI Designer · HCI Researcher · Product Designer",
+    timeline: "Conceptual prototype",
+    team: "Individual project",
+    tools: ["React", "TypeScript", "Figma"],
+    heroImage: belongImg,
+    thumbnail: belongImg,
+    tone: "light",
+    challenge: "", context: "", research: [], insights: [], hmw: [], principles: [],
+    process: [], designSystem: [], finalScreens: [], outcome: [],
+    reflection: "", limitations: "", nextSteps: "",
+  },
+  {
+    id: "mira",
+    index: "03",
     title: "Mira Health",
     slug: "mira-health",
     year: "2025",
@@ -216,7 +238,7 @@ export const projects: Project[] = [
   },
   {
     id: "kinetic",
-    index: "03",
+    index: "04",
     title: "Kinetic Type",
     slug: "kinetic-type",
     year: "2025",
@@ -268,7 +290,7 @@ export const projects: Project[] = [
   },
   {
     id: "signal",
-    index: "04",
+    index: "05",
     title: "Signal Field",
     slug: "signal-field",
     year: "2024",

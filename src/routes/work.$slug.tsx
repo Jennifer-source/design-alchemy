@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { getProject, projects } from "@/data/projects";
 import { Cursor } from "@/components/portfolio/Cursor";
 import { Footer } from "@/components/portfolio/Footer";
+import { BelongCaseStudy } from "@/components/portfolio/BelongCaseStudy";
 import { Reveal, RevealWords, SectionHeader, Shell } from "@/components/portfolio/primitives";
 
 export const Route = createFileRoute("/work/$slug")({
@@ -45,6 +46,8 @@ function CaseStudy() {
 
   const next =
     projects[(projects.findIndex((p) => p.id === project.id) + 1) % projects.length]!;
+
+  if (project.id === "belong") return <BelongCaseStudy project={project} next={next} />;
 
   return (
     <>
