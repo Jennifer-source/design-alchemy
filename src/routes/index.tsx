@@ -17,7 +17,7 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Joseph Jennifer — Designing digital experiences that move" },
+      { title: "Joseph Jennifer — UI/UX Designer" },
       {
         name: "description",
         content:
